@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Tia Amanda - Login</title>
+        <link href="resources/bootstrap-3/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="resources/css/style.css" rel="stylesheet" media="screen" />
+    </h:head>
+
+    <h:body>
+        <h:form id="formLogin">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+                        <h1 class="text-center" id="titleLogin">Entrar</h1>
+                        <div class="account-wall">
+                            <p:graphicImage  class="profile-img"
+                                             url="resources/imagens/user.png" />
+                            <p:messages id="messages" autoUpdate="true" closable="true" showIcon="true"/>
+                            <p:inputText id="nomeUsuario" placeholder="Usuário" class="form-control"
+                                         value="#{LoginMB.usuario.nm_usuario}" />
+                            <p:password id="senha" class="form-control"
+                                        placeholder="Senha"
+                                        value="#{LoginMB.usuario.ds_senha}" />
+                            <br/>
+                            <h:commandButton value="Autenticar" 
+                                             actionListener="#{LoginMB.autenticar()}"
+                                             class="btn btn-lg btn-primary btn-block" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
