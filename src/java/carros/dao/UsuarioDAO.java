@@ -1,9 +1,9 @@
-package br.com.tiaAmanda.carros.dao;
+package carros.dao;
 
-import br.com.tiaAmanda.carros.entidade.Carro;
-import br.com.tiaAmanda.carros.entidade.Usuario;
-import br.com.tiaAmanda.carros.util.FabricaConexao;
-import br.com.tiaAmanda.carros.util.exception.ErroSistema;
+import carros.entidade.Carro;
+import carros.entidade.Usuario;
+import carros.util.FabricaConexao;
+import carros.util.exception.ErroSistema;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;

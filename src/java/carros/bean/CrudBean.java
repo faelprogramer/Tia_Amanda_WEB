@@ -1,7 +1,7 @@
-package br.com.tiaAmanda.carros.bean;
+package carros.bean;
 
-import br.com.tiaAmanda.carros.dao.CrudDAO;
-import br.com.tiaAmanda.carros.util.exception.ErroSistema;
+import carros.dao.CrudDAO;
+import carros.util.exception.ErroSistema;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

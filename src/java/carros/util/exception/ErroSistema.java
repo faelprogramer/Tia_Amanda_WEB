@@ -1,4 +1,4 @@
-package br.com.tiaAmanda.carros.util.exception;
+package carros.util.exception;
 
 public class ErroSistema extends Exception {
 

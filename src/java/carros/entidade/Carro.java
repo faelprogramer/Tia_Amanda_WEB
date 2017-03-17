@@ -1,4 +1,4 @@
-package br.com.tiaAmanda.carros.entidade;
+package carros.entidade;
 
 import java.util.Date;
 import java.util.Objects;

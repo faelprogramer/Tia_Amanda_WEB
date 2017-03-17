@@ -1,7 +1,7 @@
-package br.com.tiaAmanda.carros.bean;
+package carros.bean;
 
-import br.com.tiaAmanda.carros.dao.UsuarioDAO;
-import br.com.tiaAmanda.carros.entidade.Usuario;
+import carros.dao.UsuarioDAO;
+import carros.entidade.Usuario;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 

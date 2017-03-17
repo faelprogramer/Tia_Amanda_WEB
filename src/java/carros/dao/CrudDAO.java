@@ -1,6 +1,6 @@
-package br.com.tiaAmanda.carros.dao;
+package carros.dao;
 
-import br.com.tiaAmanda.carros.util.exception.ErroSistema;
+import carros.util.exception.ErroSistema;
 import java.util.List;
 
 public interface CrudDAO<E> {//E representa minha entidade
