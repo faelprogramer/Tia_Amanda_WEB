@@ -8,6 +8,6 @@ public class UsuarioDAO {
         if (u == null) {
             return false;
         }
-        return u.getDs_senha().equalsIgnoreCase("admin");
+        return u.getDs_senha().equalsIgnoreCase("");
     }
 }

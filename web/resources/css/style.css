@@ -1,11 +1,23 @@
 body {
     padding-top: 70px;
-    background-image: url(../imagens/bg-body.jpg);
+    padding-bottom: 35px;
+    background-color: #e9ebee;
+    color: #003b77;
+    /*background-image: url(../imagens/bg-body.jpg);*/
 }
 
 #header {
-    background-color: #000;
+    background-color: #3b5998;
     color: white;
+    border-bottom: 1px solid #29487d;
+    color: #fff;
+}
+
+#footer {
+    background-color: #3b5998;
+    color: white;
+    border-bottom: 1px solid #29487d;
+    color: #fff;
 }
 
 #logo {
@@ -14,12 +26,9 @@ body {
     width: 50px;
     margin-bottom: 5px;
 }
-#footer {
-    background-color: #000;
-    color: white;
-}
 
 #titleLogin {
+    color: #365899;
     font-weight: 200;
     font-size: 4.0rem;
     line-height: 2.5rem;
@@ -69,12 +78,12 @@ body {
 {
     margin-top: 20px;
     padding: 30px 10px 30px 10px;
-    /*background-color: #f7f7f7;*/
-
+    background-color: #FFF;
+    /*
     background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CCCCCC));
     background: -moz-linear-gradient(top, #FFFFFF, #CCCCCC);
     filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#FFFFFF', EndColorStr='#CCCCCC');           
-
+    */
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);

@@ -14,8 +14,14 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 public class LoginManagedBean {
 
-    private final UsuarioDAO usuarioDAO = new UsuarioDAO();
-    private Usuario usuario = new Usuario();
+    private final UsuarioDAO usuarioDAO;
+    private Usuario usuario;
+
+    public LoginManagedBean() {
+        usuarioDAO = new UsuarioDAO();
+        usuario = new Usuario();
+        usuario.setNm_usuario("Rafael");
+    }
 
     public void autenticar() {
         if (usuarioDAO.autenticarUsuario(usuario)) {
