@@ -25,68 +25,85 @@
 
 
     <ui:define name="container">
-        <h:form>
-            <p:panel id="toggleable" header="Cadastro" toggleable="true" toggleSpeed="500" widgetVar="panel" >
-
+        <p:messages id="messages" showDetail="true" closable="true" />
+        <p:growl id="growl" showDetail="true" showSummary="false" sticky="false" life="2000" />
+        <h:form id="form">
+            <p:panel id="toggleable" header="Cadastro" toggleable="true"
+                     toggleSpeed="500" widgetVar="panel" >
                 <p:toolbar>
                     <p:toolbarGroup>
-                        <p:commandButton value="Novo" icon="fa fa-plus" class="btn btn-link"/>
-                        <p:commandButton value="Salvar" icon="fa fa-save" class="btn btn-link" />
+                        <p:commandButton value="Novo" icon="fa fa-plus"
+                                         class="btn btn-link"
+                                         update="messages form"
+                                         actionListener="#{cadastroClientesMB.btnNovo()}"/>
+                        <p:commandButton value="Salvar" icon="fa fa-save"
+                                         class="btn btn-link"
+                                         actionListener="#{cadastroClientesMB.btnSalvar()}"
+                                         update="growl form"/>
                     </p:toolbarGroup>
                     <p:toolbarGroup align="right">
                         <p:button icon="fa fa-search" class="btn btn-link"/><!--outcome="PesquisaClientes" />-->
                     </p:toolbarGroup>
                 </p:toolbar>
-
-                <div class="row">
+                <p:fragment autoUpdate="true">
                     <div class="row">
-                        <div class="col-xs-12">
-
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="cd-pessoa" value="CD Pessoa"/>
-                                <p:inputText id="cd-pessoa" class="form-control"
-                                             readonly="true" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="nome" value="Nome"/>
-                                <p:inputText id="nome" class="form-control" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="telefone" value="Telefone"/>
-                                <p:inputText id="telefone" class="form-control" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="endereco" value="Endereço"/>
-                                <p:inputText id="endereco" class="form-control" value="" />
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="numero" value="Número"/>
-                                <p:inputText id="numero" class="form-control" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="bairro" value="Bairro"/>
-                                <p:inputText id="bairro" class="form-control" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="complemento" value="Complemento"/>
-                                <p:inputText id="complemento" class="form-control" value="" />
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <h:outputLabel for="fidelidade" value="Cartão Fidelidade"/>
-                                <p:inputText id="fidelidade" class="form-control" value="" />
-                            </div>
+                        <div class="row">
                             <div class="col-xs-12">
-                                <!--<h:outputLabel for="observacao" value="Observação"/>
-                                <p:inputText id="observacao" class="form-control" value="" />-->
-                                <div class="ui-fluid">
-                                    <p:inputTextarea  placeholder="Observação" style="margin-top: 15px" />
-                                </div>
-                            </div>
 
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="cd-pessoa" value="CD Pessoa"/>
+                                    <p:inputText id="cd-pessoa" class="form-control"
+                                                 readonly="true"
+                                                 value="#{cadastroClientesMB.cliente.cd_pessoa_fisica}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="nome" value="Nome"/>
+                                    <p:inputText id="nome" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.nm_pessoa_fisica}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="telefone" value="Telefone"/>
+                                    <p:inputText id="telefone" class="form-control" 
+                                                 value="#{cadastroClientesMB.cliente.ds_telefone}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="endereco" value="Endereço"/>
+                                    <p:inputText id="endereco" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.ds_endereco}" />
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="numero" value="Número"/>
+                                    <p:inputText id="numero" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.nr_endereco}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="bairro" value="Bairro"/>
+                                    <p:inputText id="bairro" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.ds_bairro}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="complemento" value="Complemento"/>
+                                    <p:inputText id="complemento" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.ds_complemento}" />
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <h:outputLabel for="fidelidade" value="Cartão Fidelidade"/>
+                                    <p:inputText id="fidelidade" class="form-control"
+                                                 value="#{cadastroClientesMB.cliente.nr_compra_fidelidade}" />
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="ui-fluid">
+                                        <p:inputTextarea  placeholder="Observação" 
+                                                          style="margin-top: 15px" 
+                                                          value="#{cadastroClientesMB.cliente.ds_observacao}" />
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                </p:fragment>
             </p:panel>
         </h:form>
     </ui:define>
@@ -94,7 +111,7 @@
 
 
     <ui:define name="script">
-        <script type="text/javascript" src="#{facesContext.externalContext.request.contextPath}/resources/js/jquery-1.11.1.js"></script>
+        <!--<script type="text/javascript" src="#{facesContext.externalContext.request.contextPath}/resources/js/jquery-1.11.1.js"></script>-->
         <script type="text/javascript" src="#{facesContext.externalContext.request.contextPath}/resources/bootstrap-3/js/bootstrap.min.js"></script>
     </ui:define>
 </ui:composition>

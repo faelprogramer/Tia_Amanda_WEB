@@ -1,4 +1,4 @@
-package br.com.tiaAmanda.modelo.bean.dao.factory;
+package br.com.tiaAmanda.model.bean.dao.factory;
 
 import java.sql.Connection;
 import java.sql.SQLException;

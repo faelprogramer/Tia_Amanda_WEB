@@ -10,14 +10,14 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
-@ManagedBean(name = "LoginMB")
+@ManagedBean(name = "loginMB")
 @SessionScoped
-public class LoginManagedBean {
+public class LoginMB {
 
     private final UsuarioDAO usuarioDAO;
     private Usuario usuario;
 
-    public LoginManagedBean() {
+    public LoginMB() {
         usuarioDAO = new UsuarioDAO();
         usuario = new Usuario();
         usuario.setNm_usuario("Rafael");

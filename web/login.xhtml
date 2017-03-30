@@ -22,13 +22,13 @@
                                              url="resources/imagens/user.png" />
                             <p:messages id="messages" autoUpdate="true" closable="true" showIcon="true"/>
                             <p:inputText id="nomeUsuario" placeholder="Usuário" class="form-control"
-                                         value="#{LoginMB.usuario.nm_usuario}" />
+                                         value="#{loginMB.usuario.nm_usuario}" />
                             <p:password id="senha" class="form-control"
                                         placeholder="Senha"
-                                        value="#{LoginMB.usuario.ds_senha}" />
+                                        value="#{loginMB.usuario.ds_senha}" />
                             <br/>
                             <h:commandButton value="Autenticar" 
-                                             actionListener="#{LoginMB.autenticar()}"
+                                             actionListener="#{loginMB.autenticar()}"
                                              class="btn btn-lg btn-primary btn-block" />
                         </div>
                     </div>

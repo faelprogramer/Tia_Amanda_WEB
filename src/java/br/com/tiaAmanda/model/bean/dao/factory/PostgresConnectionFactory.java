@@ -1,4 +1,4 @@
-package br.com.tiaAmanda.modelo.bean.dao.factory;
+package br.com.tiaAmanda.model.bean.dao.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public final class PostgresConnectionFactory extends ConnectionFactory {
     public PostgresConnectionFactory() {
         user = "postgres";
         password = "admin";
-        db = "acai";
+        db = "acai_desenvolvimento";
         host = "10.0.0.10";
         port = "5432";
         driver = "org.postgresql.Driver";
